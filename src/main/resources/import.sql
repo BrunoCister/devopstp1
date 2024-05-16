@@ -1,0 +1,1 @@
+INSERT INTO funcionario(id, nome, email) VALUES ('40ea1be6-1c8d-472d-b367-809dde8b133f', 'Ze', 'ze@mail.com');
