@@ -40,9 +40,9 @@ public class FuncionarioController {
     @GetMapping(value = "/{id}")
     public ResponseEntity<Funcionario> buscarFuncionario(@PathVariable UUID id) {
 
-        Funcionario funcionario = funcionarioService.findById(id);
-
-        return new ResponseEntity<>(funcionario, HttpStatus.OK);
+        return funcionarioService.findById(id).map(funcionario -> {
+            return new ResponseEntity<>(funcionario, HttpStatus.OK);
+        }).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
     @PatchMapping(value = "/{id}")

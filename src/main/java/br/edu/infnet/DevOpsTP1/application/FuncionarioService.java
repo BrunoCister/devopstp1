@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -22,8 +23,8 @@ public class FuncionarioService {
         return funcionarioRepository.findAll();
     }
 
-    public Funcionario findById(UUID id) {
-        return funcionarioRepository.findById(id).get();
+    public Optional<Funcionario> findById(UUID id) {
+        return funcionarioRepository.findById(id);
     }
 
     public Funcionario patch(UUID id, Funcionario funcionario) {
