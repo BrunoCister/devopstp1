@@ -10,6 +10,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: JavaToolInstaller@0 #java 21 installer
+  inputs:
+    versionSpec: '21'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'PreInstalled'
 - task: Maven@4 #build
   inputs:
     mavenPomFile: 'devopstp1/pom.xml'
