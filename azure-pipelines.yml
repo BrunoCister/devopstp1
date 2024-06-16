@@ -48,6 +48,6 @@ steps:
     sonarQubeRunAnalysis: false
 - task: PublishBuildArtifacts@1 #publish artifact java
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/java'
-    ArtifactName: 'drop'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop/java'
     publishLocation: 'Container'
