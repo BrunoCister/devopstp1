@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.edu.infnet</groupId>
 	<artifactId>DevOpsTP1</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>DevOpsTP1</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
